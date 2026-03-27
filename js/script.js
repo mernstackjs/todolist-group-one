@@ -20,51 +20,51 @@ const list = document.createElement('ul');
 app.append(title, inputTask, inputDesc, inputDate, addBtn, list);
 
 function validateInput(text) {
-    if (text.trim().length < 2) {
-        return false;
-    }
-    return true;
+  if (text.trim().length < 2) {
+    return false;
+  }
+  return true;
 }
 
 addBtn.addEventListener('click', () => {
-    const task = inputTask.value;
-    const desc = inputDesc.value;
-    const date = inputDate.value;
+  const task = inputTask.value;
+  const desc = inputDesc.value;
+  const date = inputDate.value;
 
-    if (validateInput(task)) {
-        const li = document.createElement('li');
+  if (validateInput(task)) {
+    const li = document.createElement('li');
 
-        const h3 = document.createElement('h3');
-        h3.textContent = task;
+    const h3 = document.createElement('h3');
+    h3.textContent = task;
 
-        const p = document.createElement('p');
-        p.textContent = desc;
+    const p = document.createElement('p');
+    p.textContent = desc;
 
-        const dateInfo = document.createElement('small');
-        dateInfo.textContent = 'Deadline: ' + date;
+    const dateInfo = document.createElement('small');
+    dateInfo.textContent = 'Deadline: ' + date;
 
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Ta bort';
-        deleteBtn.onclick = () => {
-            li.remove();
-        };
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Ta bort';
+    deleteBtn.onclick = () => {
+      li.remove();
+    };
 
-        const editBtn = document.createElement('button');
-        editBtn.textContent = 'Redigera';
-        editBtn.onclick = () => {
-            inputTask.value = task;
-            inputDesc.value = desc;
-            inputDate.value = date;
-            li.remove();
-        };
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'Redigera';
+    editBtn.onclick = () => {
+      inputTask.value = task;
+      inputDesc.value = desc;
+      inputDate.value = date;
+      li.remove();
+    };
 
-        li.append(h3, p, dateInfo, editBtn, deleteBtn);
-        list.appendChild(li);
+    li.append(h3, p, dateInfo, editBtn, deleteBtn);
+    list.appendChild(li);
 
-        inputTask.value = '';
-        inputDesc.value = '';
-        inputDate.value = '';
-    } else {
-        alert('Ange en titel med minst 2 tecken');
-    }
+    inputTask.value = '';
+    inputDesc.value = '';
+    inputDate.value = '';
+  } else {
+    alert('Ange en titel med minst 2 tecken');
+  }
 });
