@@ -1,7 +1,7 @@
 ## ToDo App - Grupp 1
 Detta är en dynamisk att-göra-lista byggd med JavaScript (Vanilla), HTML och CSS. Applikationen tillåter användare att skapa konton, logga in och hantera sina personliga uppgifter i realtid.
 
-Live Demo: GitHub Profile
+[Live Demo](https://todolist-group-one.netlify.app/)
 
 ---
 
