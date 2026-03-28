@@ -3,6 +3,7 @@ Detta är en dynamisk att-göra-lista byggd med JavaScript (Vanilla), HTML och C
 
 [Live Demo](https://todolist-group-one.netlify.app/)
 
+## Dokumentation finns i mappen docs
 ---
 
 🎯 Syfte
